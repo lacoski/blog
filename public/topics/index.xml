@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Topics on Blog của Nguyễn Bá Thành</title>
+    <link>https://lacoski.github.io/topics/</link>
+    <description>Recent content in Topics on Blog của Nguyễn Bá Thành</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2008 - 2018, Steve Francia; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 18 Nov 2014 14:06:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://lacoski.github.io/topics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Development</title>
+      <link>https://lacoski.github.io/topics/development/</link>
+      <pubDate>Tue, 18 Nov 2014 14:06:00 -0500</pubDate>
+      
+      <guid>https://lacoski.github.io/topics/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>https://lacoski.github.io/topics/golang/</link>
+      <pubDate>Tue, 18 Nov 2014 14:06:00 -0500</pubDate>
+      
+      <guid>https://lacoski.github.io/topics/golang/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

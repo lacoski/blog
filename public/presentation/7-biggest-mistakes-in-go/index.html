@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="keywords" content="go, development, ">
+
+ 
+<meta property="og:type" content="article"/>
+<meta property="og:description" content=""/>
+<meta property="og:title" content="7 Common mistakes in Go and when to avoid them : spf13.com"/>
+<meta property="og:site_name" content="spf13 is Steve Francia"/>
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://lacoski.github.io/presentation/7-biggest-mistakes-in-go/">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2014-11-18"/>
+<meta property="article:modified_time" content="2014-11-18"/>
+
+
+
+<meta property="article:tag" content="go">
+<meta property="article:tag" content="development">
+
+
+
+
+<meta name="twitter:card" content="summary">
+
+<meta name="twitter:site" content="@spf13">
+<meta name="twitter:title" content="7 Common mistakes in Go and when to avoid them : spf13.com">
+<meta name="twitter:creator" content="@spf13">
+<meta name="twitter:description" content="">
+<meta name="twitter:image:src" content="">
+<meta name="twitter:domain" content="spf13.com">
+
+
+
+    <base href="https://lacoski.github.io/">
+    <title> 7 Common mistakes in Go and when to avoid them - spf13.com </title>
+    <link rel="canonical" href="https://lacoski.github.io/presentation/7-biggest-mistakes-in-go/">
+    
+
+    <link href='http://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/static/css/style.css">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+</head>
+
+<body lang="en" itemscope itemtype="http://schema.org/Article">
+<header id="header">
+    <figure>
+      <a href="/" border=0 id="logolink"><div class="icon-spf13-3" id="logo"> </div></a>
+    </figure>
+    <div id="byline">by Steve Francia</div>
+    <nav id="nav">
+            <ul id="mainnav">
+            <li>
+                <a href="/post/">
+                <span class="icon"> <i aria-hidden="true" class="icon-quill"></i></span>
+                <span> blog </span>
+            </a>
+            </li>
+            <li>
+            <a href="/project/">
+                <span class="icon"> <i aria-hidden="true" class="icon-console"></i></span>
+                <span> code </span>
+            </a>
+            </li>
+            <li>
+            <a href="/presentation/">
+                <span class="icon"> <i aria-hidden="true" class="icon-stats"></i></span>
+                <span> talks </span>
+            </a>
+            </li>
+            <li>
+            <a href="http://stevefrancia.com">
+                <span class="icon"> <i aria-hidden="true" class="icon-13"></i></span>
+                <span> me </span>
+            </a>
+            </li>
+        </ul>
+
+            <ul id="social">
+            <li id="share">
+                <span class="icon icon-bubbles"> </span>
+                <span class="title"> share </span>
+                <div class="dropdown share">
+                    <ul class="social">
+                      <li> <a href="https://twitter.com/intent/tweet?status=7%20Common%20mistakes%20in%20Go%20and%20when%20to%20avoid%20them-https%3a%2f%2flacoski.github.io%2fpresentation%2f7-biggest-mistakes-in-go%2f" target="_blank" title="Follow me on Twitter" class="twitter"><span class="icon icon-twitter"></span>Twitter</a> </li>
+                        <li> <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2flacoski.github.io%2fpresentation%2f7-biggest-mistakes-in-go%2f" target="_blank" title="Join me on Facebook" class="facebook"><span class="icon icon-facebook"></span>Facebook</a> </li>
+                        <li> <a href="https://plus.google.com/share?url=https%3a%2f%2flacoski.github.io%2fpresentation%2f7-biggest-mistakes-in-go%2f" target="_blank" title="Google+" class="googleplus"><span class="icon icon-google-plus"></span>Google+</a> </li>
+                        <li> <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2flacoski.github.io%2fpresentation%2f7-biggest-mistakes-in-go%2f&title=7%20Common%20mistakes%20in%20Go%20and%20when%20to%20avoid%20them&source=spf13" target="_blank" title="LinkedIn" class="linkedin"><span class="icon icon-linkedin"></span>LinkedIn</a> </li>
+                        <li> <a href="http://del.icio.us/post?url=https%3a%2f%2flacoski.github.io%2fpresentation%2f7-biggest-mistakes-in-go%2f" target="_blank" title="Delicious" class="delicious"><span class="icon icon-delicious"></span>Delicious</a> </li>
+                        <li> <a href="http://www.reddit.com/submit?url=https%3a%2f%2flacoski.github.io%2fpresentation%2f7-biggest-mistakes-in-go%2f" target="_blank" title="Reddit" class="reddit"><span class="icon icon-reddit"></span>Reddit</a> </li>
+                        <li> <a href="http://www.stumbleupon.com/submit?url=https%3a%2f%2flacoski.github.io%2fpresentation%2f7-biggest-mistakes-in-go%2f" target="_blank" title="StumbleUpon" class="stumbleupon"><span class="icon icon-stumbleupon"></span>StumbleUpon</a> </li>
+                    </ul>
+                    <span class="subcount">sharing is caring</span>
+                </div>
+            </li>
+            <li id="follow">
+                <span class="icon icon-rocket"> </span>
+                <span class="title"> follow </span>
+                <div class="dropdown follow">
+                    <ul class="social">                        
+                        <li> <a href="https://www.facebook.com/" target="_blank" title="Join me on Facebook" class="facebook"><span class="icon icon-facebook"></span>Facebook</a> </li>                        
+                        <li> <a href="https://github.com/lacoski" target="_blank" title="GitHub" class="github"><span class="icon icon-github"></span>GitHub</a> </li>                        
+                    </ul>
+                    <span class="subcount">join 10k+ subscribers &amp; followers</span>
+                </div>
+            </li>
+        </ul>
+
+    </nav>
+</header>
+
+
+
+<section id="main">
+  <h1 itemprop="name" id="title">7 Common mistakes in Go and when to avoid them</h1>
+  <div>
+        <article itemprop="articleBody" id="content">
+           
+
+<p>Not a generic list of programming mistakes, these are the lessons I wish I
+learned earlier while developing Go. I&rsquo;ve spent the past two years developing
+some of the most popular libraries and applications written in Go. I&rsquo;ve also
+made a lot of mistakes along the way. Recognizing that &ldquo;The only real mistake
+is the one from which we learn nothing. -John Powell&rdquo;, I would like to share
+with you the mistakes that I have made over my journey with Go and when you can
+avoid them.</p>
+
+<p>Originally given in NYC Nov 14 at <a href="http://gothamgo.com">GothamGo</a>.</p>
+
+<div class="embed slideshare">
+<iframe src="http://www.slideshare.net/slideshow/embed_code/41716887?rel=0" width="599" height="487" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen webkitallowfullscreen mozallowfullscreen> </iframe>
+</div>
+
+
+<h2 id="transcript">Transcript</h2>
+
+<ol>
+<li>7 Common Mistakes In Go and when to avoid them</li>
+<li>@Spf13 Author of Hugo, Cobra, Afero, Viper &amp; more</li>
+<li>“As long as the world is turning and spinning, we&rsquo;re gonna be dizzy and we&rsquo;re gonna make mistakes.” –Mel Brooks</li>
+<li>“Appreciate your mistakes for what they are: precious life lessons that can only be learned the hard way. “ –Al Franken</li>
+<li>“If I had to live my life again, I&rsquo;d make the same mistakes, only sooner.” – Tallulah Bankhead</li>
+<li>7 Lessons I Wish I Learned Sooner</li>
+<li>Mistake 1: Not Accepting Interfaces</li>
+<li>State &amp; Behavior •Types can express state &amp; behavior •State = data structure •Behavior = methods</li>
+<li>Interfaces •One of Go’s most powerful features •Permits extensibility •Defined by methods •Adherance is only satisfied by behavior</li>
+<li>Example : []Byte type Source struct { Frontmatter []byte Content []byte }</li>
+<li>Func Restricted To String func StripHTML(s string) string { output := &ldquo;&rdquo; // Shortcut strings with no tags in them if !strings.ContainsAny(s, &ldquo;&lt;&gt;&ldquo;) { output = s } else { s = strings.Replace(s, &ldquo;n&rdquo;, &ldquo; &ldquo;, -1) s = strings.Replace(s, &ldquo;</p>&rdquo;, &ldquo;n&rdquo;, -1) s = strings.Replace(s, &ldquo;<br>&rdquo;, &ldquo;n&rdquo;, -1) s = strings.Replace(s, &ldquo;<br />&rdquo;, &ldquo;n&rdquo;, -1) …</li>
+<li>Passes Implementation Details Down The Stack func (p *Page) Plain() string { return helpers.StripHTML(string(p.Content)) }</li>
+<li>Any Read() Works func StripHTML(r Reader) string { buf := new(bytes.Buffer) buf.ReadFrom&reg; by := buf.Bytes() if bytes.ContainsAny(s, []byte(&rdquo;&lt;&gt;&ldquo;)) { by = bytes.Replace(by, []byte(&ldquo;n&rdquo;), &ldquo; &ldquo;, -1) by = bytes.Replace(by, []byte(&rdquo;</p>&rdquo;), &ldquo;n&rdquo;, -1) by = bytes.Replace(by, []byte(&rdquo;<br>&rdquo;), &ldquo;n&rdquo;, -1) by = bytes.Replace(by, []byte(&rdquo;<br />&rdquo;), &ldquo;n&rdquo;, -1) …</li>
+<li>type Source struct { Frontmatter []byte content []byte } type Reader interface { Read(p []byte) (n int, err error) } func (s *Source) Content() (Reader) { return bytes.NewReader(content) } Example : Read</li>
+<li>type Source struct { Frontmatter []byte content []byte } type Reader interface { Read(p []byte) (n int, err error) } func (s *Source) Content() (Reader) { return bytes.NewReader(content) } Example : Read</li>
+<li>type Source struct { Frontmatter []byte content []byte } type Reader interface { Read(p []byte) (n int, err error) } func (s *Source) Content() (Reader) { return bytes.NewReader(content) } Example : Read</li>
+<li>func (p *Page) Plain() string { return helpers.StripHTML(p.Content()) } Implementation Details Abstracted With A Method</li>
+<li>Mistake 2: Thinking Of Errors As Strings</li>
+<li>Error Is An Interface type error interface { Error() string }</li>
+<li>Standard Errors •errors.New(“error here”) is usually sufficient •Exported Error Variables can be easily checked</li>
+<li>Custom Errors •Can provide context to guarantee consistent feedback •Provide a type which can be different from the error value •Can provide dynamic values (based on internal error state)</li>
+<li>func NewPage(name string) (p *Page, err error) { if len(name) == 0 { return nil, errors.New(&ldquo;Zero length page name&rdquo;) } Standard Error</li>
+<li>Exported Error Var var ErrNoName = errors.New(&ldquo;Zero length page name&rdquo;) func NewPage(name string) (*Page, error) { if len(name) == 0 { return nil, ErrNoName }</li>
+<li>Exported Error Var var ErrNoName = errors.New(&ldquo;Zero length page name&rdquo;) func Foo(name string) (error) { err := NewPage(&ldquo;bar&rdquo;) if err == ErrNoName { newPage(&ldquo;default&rdquo;) } else { log.FatalF(err) } }</li>
+<li>Custom Errors : Os // Portable analogs of some common system call errors. var ErrInvalid = errors.New(&ldquo;invalid argument&rdquo;) var ErrPermission = errors.New(&ldquo;permission denied&rdquo;) // PathError records an error and // the operation and file path that caused it. type PathError struct { Op string Path string Err error } func (e *PathError) Error() string { return e.Op + &ldquo; &rdquo; + e.Path + &ldquo;: &ldquo; + e.Err.Error() }</li>
+<li>Custom Errors : Os // Portable analogs of some common system call errors. var ErrInvalid = errors.New(&ldquo;invalid argument&rdquo;) var ErrPermission = errors.New(&ldquo;permission denied&rdquo;) // PathError records an error and // the operation and file path that caused it. type PathError struct { Op string Path string Err error } func (e *PathError) Error() string { return e.Op + &ldquo; &rdquo; + e.Path + &ldquo;: &ldquo; + e.Err.Error() }</li>
+<li>Custom Errors : Os func (f *File) WriteAt(b []byte, off int64) (n int, err error) { if f == nil { return 0, ErrInvalid } for len(b) &gt; 0 { m, e := f.pwrite(b, off) if e != nil { err = &amp;PathError{&ldquo;write&rdquo;, f.name, e} break } n += m b = b[m:] off += int64(m) } return }</li>
+<li>Custom Errors : Os func (f *File) WriteAt(b []byte, off int64) (n int, err error) { if f == nil { return 0, ErrInvalid } for len(b) &gt; 0 { m, e := f.pwrite(b, off) if e != nil { err = &amp;PathError{&ldquo;write&rdquo;, f.name, e} break } n += m b = b[m:] off += int64(m) } return }</li>
+<li>Custom Errors : Os func (f *File) WriteAt(b []byte, off int64) (n int, err error) { if f == nil { return 0, ErrInvalid } for len(b) &gt; 0 { m, e := f.pwrite(b, off) if e != nil { err = &amp;PathError{&ldquo;write&rdquo;, f.name, e} break } n += m b = b[m:] off += int64(m) } return }</li>
+<li>Custom Errors : Os func baa(f *file) error { … n, err := f.WriteAt(x, 3) if _, ok := err.(*PathError) { … } else { log.Fatalf(err) } }</li>
+<li>Custom Errors : Os … if serr != nil { if serr, ok := serr.(*PathError); ok &amp;&amp; serr.Err == syscall.ENOTDIR { return nil } return serr …</li>
+<li>Custom Errors : Os … if serr != nil { if serr, ok := serr.(*PathError); ok &amp;&amp; serr.Err == syscall.ENOTDIR { return nil } return serr …</li>
+<li>Mistake 3: Requring Broad Interfaces</li>
+<li>Interfaces Are Composable •Functions should only accept interfaces that require the methods they need •Functions should not accept a broad interface when a narrow one would work •Compose broad interfaces made from narrower ones</li>
+<li>Composing Interfaces type File interface { io.Closer io.Reader io.ReaderAt io.Seeker io.Writer io.WriterAt }</li>
+<li>Requiring Broad Interfaces func ReadIn(f File) { b := []byte{} n, err := f.Read(b) &hellip; }</li>
+<li>Composing Interfaces type File interface { io.Closer io.Reader io.ReaderAt io.Seeker io.Writer io.WriterAt }</li>
+<li>Requiring Narrow Interfaces func ReadIn(r Reader) { b := []byte{} n, err := r.Read(b) &hellip; }</li>
+<li>Mistake 4: Methods Vs Functions</li>
+<li>Too Many Methods •A lot of people from OO backgrounds overuse methods •Natural draw to define everything via structs and methods</li>
+<li>What Is A Function? •Operations performed on N1 inputs that results in N2 outputs •The same inputs will always result in the same outputs •Functions should not depend on state</li>
+<li>What Is A Method? •Defines the behavior of a type •A function that operates against a value •Should use state •Logically connected</li>
+<li>Functions Can Be Used With Interfaces •Methods, by definition, are bound to a specific type •Functions can accept interfaces as input</li>
+<li>Example From Hugo func extractShortcodes(s string, p *Page, t Template) (string, map[string]shortcode, error) { &hellip; for { switch currItem.typ { &hellip; case tError: err := fmt.Errorf(&ldquo;%s:%d: %s&rdquo;, p.BaseFileName(), (p.lineNumRawContentStart() + pt.lexer.lineNum() - 1), currItem) } } &hellip; }</li>
+<li>Example From Hugo func extractShortcodes(s string, p *Page, t Template) (string, map[string]shortcode, error) { &hellip; for { switch currItem.typ { &hellip; case tError: err := fmt.Errorf(&ldquo;%s:%d: %s&rdquo;, p.BaseFileName(), (p.lineNumRawContentStart() + pt.lexer.lineNum() - 1), currItem) } } &hellip; }</li>
+<li>Mistake 5: Pointers Vs Values</li>
+<li>Pointers Vs Values •It’s not a question of performance (generally), but one of shared access •If you want to share the value with a function or method, then use a pointer •If you don’t want to share it, then use a value (copy)</li>
+<li>Pointer Receivers •If you want to share a value with it’s method, use a pointer receiver •Since methods commonly manage state, this is the common usage •Not safe for concurrent access</li>
+<li>Value Receivers •If you want the value copied (not shared), use values •If the type is an empty struct (stateless, just behavior)… then just use value •Safe for concurrent access</li>
+<li>Afero File type InMemoryFile struct { at int64 name string data []byte closed bool } func (f *InMemoryFile) Close() error { atomic.StoreInt64(&amp;f.at, 0) f.closed = true return nil }</li>
+<li>type Time struct { sec int64 nsec uintptr loc *Location } func (t Time) IsZero() bool { return t.sec == 0 &amp;&amp; t.nsec == 0 } Time</li>
+<li>Mistake 6: Not Using Io.Reader &amp; Io.Writer</li>
+<li>Io.Reader &amp; Io.Writer •Simple &amp; flexible interfaces for many operations around input and output •Provides access to a huge wealth of functionality •Keeps operations extensible</li>
+<li>Io.Reader &amp; Io.Writer type Reader interface { Read(p []byte) (n int, err error) } type Writer interface { Write(p []byte) (n int, err error) }</li>
+<li>func (page *Page) saveSourceAs(path string) { b := new(bytes.Buffer) b.Write(page.Source.Content) page.saveSource(b.Bytes(), path) } func (page *Page) saveSource(by []byte, inpath string) { WriteToDisk(inpath, bytes.NewReader(by)) } Stop Doing This!!</li>
+<li>func (page *Page) saveSourceAs(path string) { b := new(bytes.Buffer) b.Write(page.Source.Content) page.saveSource(b.Bytes(), path) } func (page *Page) saveSource(by []byte, inpath string) { WriteToDisk(inpath, bytes.NewReader(by)) } Stop Doing This!!</li>
+<li>func (page *Page) saveSourceAs(path string) { b := new(bytes.Buffer) b.Write(page.Source.Content) page.saveSource(b.Bytes(), path) } func (page *Page) saveSource(by []byte, inpath string) { WriteToDisk(inpath, bytes.NewReader(by)) } Stop Doing This!! <a href="https://github.com/spf13/hugo/blob/master/hugolib/page.go#L582">https://github.com/spf13/hugo/blob/master/hugolib/page.go#L582</a></li>
+<li>func (page *Page) saveSourceAs(path string) { b := new(bytes.Buffer) b.Write(page.Source.Content) page.saveSource(b, path) } func (page *Page) saveSource(b io.Reader, inpath string) { WriteToDisk(inpath, b) } Instead</li>
+<li>Mistake 7: Ignoring Concurrent Access</li>
+<li>Consider Concurrency •If you provide a library someone will use it concurrently •Data structures are not safe for concurrent access •Values aren’t safe, you need to create safe behavior around them</li>
+<li>Making It Safe •Sync package provides behavior to make a value safe (Atomic/ Mutex) •Channels cordinate values across go routines by permitting one go routine to access at a time</li>
+<li>Maps Are Not Safe func (m *MMFs) Create(name string) (File, error) { m.getData()[name] = MemFileCreate(name) m.registerDirs(m.getData()[name]) return m.getData()[name], nil }</li>
+<li>Maps Are Not Safe func (m *MMFS) Create(name string) (File, error) { m.getData()[name] = MemFileCreate(name) m.registerDirs(m.getData()[name]) return m.getData()[name], nil }</li>
+<li>Maps Are Not Safe panic: runtime error: invalid memory address or nil pointer dereference [signal 0xb code=0x1 addr=0x28 pc=0x1691a7] goroutine 90 [running]: runtime.panic(0x501ea0, 0x86b104) /usr/local/Cellar/go/1.3.3/libexec/src/pkg/runtime/ panic.c:279 +0xf5 github.com/spf13/afero. (*MemMapFs).registerDirs(0xc208000860, 0x0, 0x0) /Users/spf13/gopath/src/github.com/spf13/afero/ memmap.go:88 +0x27</li>
+<li>Maps Can Be Used Safely func (m *MMFS) Create(name string) (File, error) { m.lock() m.getData()[name] = MemFileCreate(name) m.unlock() m.registerDirs(m.getData()[name]) return m.getData()[name], nil }</li>
+<li>Biggsest Mistake: Not Makimg Mistakes</li>
+<li>@Spf13 Author of Hugo, Cobra, Afero, Viper &amp; more</li>
+</ol>
+
+        </article>
+  </div>
+</section>
+
+
+
+<aside id="meta">
+
+    <div>
+        <section id="datecount">
+          <h4 id="date"> Tue Nov 18, 2014 </h4>
+          <h5 id="wc"> 1800 Words </h5>
+          <h5 id="readtime"> Read in about 9 Min </h5>
+        </section>
+        <ul id="categories">
+          
+            <li><a href="https://lacoski.github.io//topics/development">Development</a> </li>
+          
+            <li><a href="https://lacoski.github.io//topics/golang">golang</a> </li>
+          
+        </ul>
+        <ul id="tags">
+          
+            <li> <a href="https://lacoski.github.io//tags/go">go</a> </li>
+          
+            <li> <a href="https://lacoski.github.io//tags/development">development</a> </li>
+          
+        </ul>
+    </div>
+
+    <div>
+        <section id="prev">
+            &nbsp;
+        </section><section id="next">
+            &nbsp;<a class="next" href="https://lacoski.github.io/project/nitro/">Nitro : A quick and simple profiler for golang <i class="icon-arrow-right"></i></a>
+        </section>
+    </div>
+
+    <div> <section id="author"> <h4>Về tác giả:</h4> 
+
+            <p>
+                Mình là Nguyễn Bá Thành, hiện là sinh viên Trường Đại Học Thăng Long, khóa K27, chuyên ngành Mạng và truyền thông.
+
+                Năm 2 đã từng thực tập vị trí Lập Trình Viên ASP.NET MVC 5 Backend khoảng 8 tháng tại công ty ICOMM.
+                
+                Tới cuối năm 3 mình chuyển sang tìm hiểu về Linux và Network, và may mắn tới hè được nhận vào phòng hệ thống công ty TECAPRO.
+                
+                Tới cuối năm 4, mình muốn tập trung hơn vào storage nên chuyển sang team HOCCHUDONG và loanh quanh tới hiện tại.
+                
+                Tới nay, mình cũng đã sắp ra trường và chuẩn bị thất học :D.
+            </p>
+        </section> </div>
+
+</aside>
+
+<meta itemprop="wordCount" content="1776">
+<meta itemprop="datePublished" content="2014-11-18">
+<meta itemprop="url" content="https://lacoski.github.io/presentation/7-biggest-mistakes-in-go/">
+
+
+
+<footer>
+  <div>
+    <p>
+    &copy; 2013-18 <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Steve Francia.</span></span>
+    <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons Attribution">Some rights reserved</a>;
+    please attribute properly and link back. <br>
+    Powered by <a href="http://gohugo.io">Hugo</a>.
+    </p>
+  </div>
+</footer>
+<script type="text/javascript">
+(function(){var j=function(a,b){return window.getComputedStyle?getComputedStyle(a).getPropertyValue(b):a.currentStyle[b]};var k=function(a,b,c){if(a.addEventListener)a.addEventListener(b,c,false);else a.attachEvent('on'+b,c)};var l=function(a,b){for(key in b)if(b.hasOwnProperty(key))a[key]=b[key];return a};window.fitText=function(d,e,f){var g=l({'minFontSize':-1/0,'maxFontSize':1/0},f);var h=function(a){var b=e||1;var c=function(){a.style.fontSize=Math.max(Math.min(a.clientWidth/(b*10),parseFloat(g.maxFontSize)),parseFloat(g.minFontSize))+'px'};c();k(window,'resize',c)};if(d.length)for(var i=0;i<d.length;i++)h(d[i]);else h(d);return d}})();
+fitText(document.getElementById('title'), 1)
+</script>
+
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	if (window.sessionStorage) {
+		var GA_SESSION_STORAGE_KEY = 'ga:clientId';
+		ga('create', 'UA-7131036-1', {
+	    'storage': 'none',
+	    'clientId': sessionStorage.getItem(GA_SESSION_STORAGE_KEY)
+	   });
+	   ga(function(tracker) {
+	    sessionStorage.setItem(GA_SESSION_STORAGE_KEY, tracker.get('clientId'));
+	   });
+   }
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>
+
