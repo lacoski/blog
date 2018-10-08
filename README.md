@@ -7,14 +7,14 @@ https://github.com/gohugoio/hugo/releases
 ```
 - Đối với ubuntu, down bản .deb, cài như bình thường.
 
-### Bước 2: Chuẩn bị
+## Bước 2: Chuẩn bị
 Hugo page yêu cầu 2 repo:
 - 1 (blog) repo: Chứa bài viết 
 - 1 (user.github.io) repo: Chứa project build (hugo cần build lại từ raw content sang kiến trúc riêng của hugo).
 Lựa chọn theme
 - Down theme hugo chỉ định về (https://github.com/lacoski/spf13.com) bản chất theme hugo là 1 repo raw kiến trúc hugo. (zip hoặc git repo)
 
-### Bước 3: Cài đặt
+## Bước 3: Cài đặt
 - Clone repo blog về máy (git clone <blog-url>)
 - Copy dữ liệu từ theme chỉ định sang
 ```
@@ -52,7 +52,7 @@ googleAnalytics = "UA-7131036-1"
     privacyEnhanced = true
 ```
 
-### Bước 4: Build thử tại máy
+## Bước 4: Build thử tại máy
 ```
 $ cd blog/
 $ hugo server -D
@@ -67,8 +67,8 @@ Press Ctrl+C to stop
 ```
 > Truy cập web theo URL: http://localhost:1313/
 
-### Bước 5: Viết bài
-Truy cập vào nơi lưu trữ các bài biết, viết bài theo kiến trúc từng theme
+## Bước 5: Viết bài
+### Truy cập vào nơi lưu trữ các bài biết, viết bài theo kiến trúc từng theme
 
 Ở đây, truy cập
 ```
@@ -77,13 +77,13 @@ blog/content/presentation
 blog/content/project
 ```
 
-### Bước 6: Build, deploy
-#### Đầu tiên xóa file `public` (nếu có)
+## Bước 6: Build, deploy
+### Đầu tiên xóa file `public` (nếu có)
 ```
 cd blog/
 rm -rf public
 ```
-#### Add remote branch
+### Add remote branch
 > Code hugo sau khi build sẽ được đưa tới repo github io 
 ```
 git submodule add -b master git@github.com:<USERNAME>/<USERNAME>.github.io.git public
@@ -106,7 +106,7 @@ Receiving objects: 100% (3624/3624), 18.89 MiB | 89.00 KiB/s, done.
 Resolving deltas: 100% (1972/1972), done.
 ```
 
-#### Build web
+### Build web
 ```
 cd blog/
 vi deploy.sh
@@ -162,7 +162,7 @@ thanhnb@thanhnb-pc:~/Hugo/blog$
 
 ```
 
-### Bước 7: Truy cập web đã build
+## Bước 7: Truy cập web đã build
 Truy cập
 ```
 https://<user>.github.io
