@@ -1,0 +1,24 @@
+baseurl = "https://lacoski.github.io/"
+title = "Blog của Nguyễn Bá Thành"
+languageCode = "en-us"
+disqusShortname = "thanhnb"
+copyright = "Copyright (c) 2008 - 2018, Steve Francia; all rights reserved."
+MetaDataFormat = "toml"
+googleAnalytics = "UA-7131036-1"
+
+[author]
+    name = "Nguyễn Bá Thành"
+
+[indexes]
+    tag = "tags"
+    topic = "topics"
+
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
+    useSessionStorage = true
+  [privacy.twitter]
+    enableDNT = true
+  [privacy.youtube]
+    privacyEnhanced = true
