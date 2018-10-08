@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog của Nguyễn Bá Thành</title>
+    <link>https://lacoski.github.io/</link>
+    <description>Recent content on Blog của Nguyễn Bá Thành</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2008 - 2018, Steve Francia; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 18 Nov 2014 14:06:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://lacoski.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>7 Common mistakes in Go and when to avoid them</title>
+      <link>https://lacoski.github.io/presentation/7-biggest-mistakes-in-go/</link>
+      <pubDate>Tue, 18 Nov 2014 14:06:00 -0500</pubDate>
+      
+      <guid>https://lacoski.github.io/presentation/7-biggest-mistakes-in-go/</guid>
+      <description>Not a generic list of programming mistakes, these are the lessons I wish I learned earlier while developing Go. I&amp;rsquo;ve spent the past two years developing some of the most popular libraries and applications written in Go. I&amp;rsquo;ve also made a lot of mistakes along the way. Recognizing that &amp;ldquo;The only real mistake is the one from which we learn nothing. -John Powell&amp;rdquo;, I would like to share with you the mistakes that I have made over my journey with Go and when you can avoid them.</description>
+    </item>
+    
+    <item>
+      <title>Nitro : A quick and simple profiler for golang</title>
+      <link>https://lacoski.github.io/project/nitro/</link>
+      <pubDate>Wed, 19 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://lacoski.github.io/project/nitro/</guid>
+      <description>&lt;p&gt;
+&lt;figure class=&#34;third right&#34;&gt;
+    
+        &lt;img src=&#34;https://lacoski.github.io/media/nitro.png&#34; alt=&#34;Nitro&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+Nitro is a quick and easy performance analyzer library for golang.
+It is useful for comparing A/B against different drafts of functions
+or different functions. Building on the standard pprof library, Nitro
+provides a very high level view of your application performance to help
+identify areas to investigate further. It also provides an easy metric
+to compare as you revise and improve each part of your application.
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
