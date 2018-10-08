@@ -1,0 +1,4 @@
+[submodule "public"]
+	path = public
+	url = git@github.com:lacoski/lacoski.github.io.git
+	branch = master
