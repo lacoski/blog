@@ -167,3 +167,10 @@ Truy cập
 ```
 https://<user>.github.io
 ```
+
+# Nguồn 
+https://gohugo.io/getting-started/quick-start/
+
+https://gohugo.io/getting-started/installing/
+
+https://gohugo.io/hosting-and-deployment/hosting-on-github/
