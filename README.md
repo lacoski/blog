@@ -144,7 +144,7 @@ chmod +x deploy.sh
 ```
 - Chạy
 ```
-./deploy.sh "commint ..."
+./deploy.sh "commit ..."
 
 ....
 
@@ -165,5 +165,5 @@ thanhnb@thanhnb-pc:~/Hugo/blog$
 ### Bước 7: Truy cập web đã build
 Truy cập
 ```
-https://<user>.github.io/post/
+https://<user>.github.io
 ```
