@@ -9,8 +9,12 @@ https://github.com/gohugoio/hugo/releases
 
 ## Bước 2: Chuẩn bị
 ### Hugo page yêu cầu 2 repo:
-- repo chứa bài viết: Chứa bài viết (VD: blog)
-- repo chứa web đã build: Chứa project build (hugo cần build lại từ raw content sang kiến trúc riêng của hugo (user.github.io) VD: lacoski.github.io).
+- repo chứa bài viết: Chứa bài viết (VD: blog), có thể đạt tên khác theo mục đích
+- repo chứa web đã build: Chứa web đã build (hugo cần build lại từ raw content sang kiến trúc riêng của hugo (user.github.io) VD: lacoski.github.io).
+
+> Các repo `blog`, `lacoski.github.io` sẽ được tạo mới trên github cá nhân.
+
+> 
 
 Tải theme:
 - Tải theme sau (https://github.com/lacoski/spf13.com)
@@ -20,7 +24,9 @@ Tải theme:
 > Theme hugo cần được build mới có thể sử dụng
 
 ## Bước 3: Cài đặt
-- Clone repo blog về máy (git clone <blog-url>)
+> Yêu cầu tạo mới 2 repo `blog`, `lacoski.github.io`
+
+- Clone repo `blog` về máy (git clone <blog-url>)
   ```
   git clone https://github.com/lacoski/blog.git
   ```
