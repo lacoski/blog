@@ -1,29 +1,24 @@
 ---
 Description: ""
 Keywords:
-- Development
-- Leadership
-- Systems
-- security
+- Django
+- Python
 Section: post
 Slug: django-multi-settings
 Tags:
-- security
-Thumbnail: /uploads/2009/12/300px-HK_Souvenir_Bank_of_East_Asia_MPF_USB_Flash_Drive_a.jpg
+- Django
 Title: Cấu hình multi settings Django
 Topics:
-- Development
-- Leadership
-- Systems
+- Django
+- Python
+
 Url: post/django-multi-settings
-date: 2018-10-22
-disqus_identifier: 124 http://localhost/~sfrancia/wordpress/?p=124
-disqus_title: Cấu hình multi settings Django
-disqus_url: http://spf13.com/post/7-security-practices-you-need-to-follow/
+date: 2018-10-25
 ---
 
-# Cách sử dụng nhiều môi trường khác nhau trên Django
----
+Cấu hình cho phép triển khai Django với nhiều cấu hình khác nhau
+<!--more-->
+
 ## Cấu trúc cũ của project:
 ```
 project/
